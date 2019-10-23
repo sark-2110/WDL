@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-	<title>h2h</title>
+  <title>h2h</title>
 </head>
 
 <style>
-	i {
+  i {
   border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -20,24 +20,24 @@ body {margin: 0;padding: 0;}
   transform: rotate(45deg);
 }
 .heading{
-		background-color: #FFF5EE;
+    background-color: #FFF5EE;
     text-align: center;
 }
 .heading header{
-	font-family:"Lobster", Sans-serif;
-	font-size: 60px;
+  font-family:"Lobster", Sans-serif;
+  font-size: 60px;
   letter-spacing: 3px;
-	text-align: center;
+  text-align: center;
 }
 .heading p{
-	font-family:"Lobster",Sans-serif;
-	text-align: center;
+  font-family:"Lobster",Sans-serif;
+  text-align: center;
   margin-top: 5px;
-	font-size: 25px;
+  font-size: 25px;
 }
 .dropbtn {
- 	background-color: #FFF5EE;
- 	color: black;
+  background-color: #FFF5EE;
+  color: black;
   padding: 16px;
   font-size: 22px;
   border: none;
@@ -222,70 +222,101 @@ span.psw {
   border-radius: 4px;
   padding: 12px;
   font-size: 15px;font-family: "Lobster",Sans-serif;
-  box-sizing: border-box;width: 150%;}
+  box-sizing: border-box;
+  width: 150%;
+}
+  .left-navi{
+    border-left: 3px solid black;
+    height: 100%;
+    left: 75%;
+    position: absolute;
+  }
+  .right-navi{
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  .right-navi a{
+    display: block;
+  }
 </style>
 <body>
-	<div class="heading">
-	  <header>Helping Hand</header>
+  <div class="heading">
+    <header>Helping Hand</header>
     <p>Your destiny to book</p>
     <div class="dropdown">
-			<button class="dropbtn">Books <i class="down"></i></button>
- 			<div class="dropdown-content">
-  			<a href="#">Author</a>
-  			<a href="#">Recently Added</a>
-  			<a href="#">Publication</a>
-  		</div>
-  	</div>
+      <button class="dropbtn">Books <i class="down"></i></button>
+      <div class="dropdown-content">
+        <a href="#">Author</a>
+        <a href="#">Recently Added</a>
+        <a href="#">Publication</a>
+      </div>
+    </div>
     <div class="dropdown">
-  		<button class="dropbtn">College <i class="down"></i></button>
-			<div class="dropdown-content">
-  			<a href="#">Location</a>
-  			<a href="#">Name</a>
-  			<a href="#">Under University</a>
-		  </div>
-	  </div>
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+      <button class="dropbtn">College <i class="down"></i></button>
+      <div class="dropdown-content">
+        <a href="#">Location</a>
+        <a href="#">Name</a>
+        <a href="#">Under University</a>
+      </div>
+    </div>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-		<div id="id01" class="modal">
-  		<form class="modal-content animate" action="/action_page.php">
-    		<div class="imgcontainer">
-      		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      		<img src="book.png" alt="book" class="avatar">
-    	  </div>
-    		<div class="container">
-      		<label for="uname"><b style="font-family: Lobster;font-size: 22px;">Username</b></label>
-      		<input type="text" placeholder="Enter Username" name="uname" required>
-    			<label for="psw"><b style="font-family: Lobster;font-size: 22px;">Password</b></label>
-    			<input type="password" placeholder="Enter Password" name="psw" required>
-      		<button type="submit">Login</button>
-      		<label style="font-family: Lobster;">
-    			<input type="checkbox" checked="checked" name="remember" > Remember me
-    			</label>
-    		</div>
-    		<div class="container" style="background-color:#f1f1f1">
-      		<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      		<span class="psw" style="font-family: Lobster;font-size: 20px;">Forgot <a href="#" style="font-family: Lobster;font-size: 20px;">password?</a></span>
-    		</div>
-  		</form> 
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="book.png" alt="book" class="avatar">
+        </div>
+        <div class="container">
+          <label for="uname"><b style="font-family: Lobster;font-size: 22px;">Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b style="font-family: Lobster;font-size: 22px;">Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit">Login</button>
+          <label style="font-family: Lobster;">
+          <input type="checkbox" checked="checked" name="remember" > Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw" style="font-family: Lobster;font-size: 20px;">Forgot <a href="#" style="font-family: Lobster;font-size: 20px;">password?</a></span>
+        </div>
+      </form> 
     </div>
     <div class="search-bar">
-      <form class="searchh-icon" action="/action_page.php">
-          <input type="text" name="searchBar" placeholder="Search Author,Publication,Name">
-          
+      <form class="search-icon" action="/action_page.php">
+          <input type="text" name="search-bar" placeholder="Search Author,Publication,Name">
       </form>
     </div>
   </div>
-		<script>
+  <div class="right-navi">
+    <a class="active" href="#HOME"></a>
+    <a href="#COMP">Computer Engineering</a>
+    <a href="#IT">IT Engineering</a>
+    <a href="#ENTC">Electronics & Telecomunication Engineering</a>
+    <a href="#CIVIL">Civil Engineering</a>
+    <a href="#MECH">Mechanical Engineering</a>
+  </div>
+  <div class="left-navi">
+    
+  </div>
+
+    <script>
 // Get the modal
-		var modal = document.getElementById('id01');
+    var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-    	if (event.target == modal) {
-        	modal.style.display = "none";
-    		}	
-		}
-		</script>
+    window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+        } 
+    }
+    </script>
 
   </div>
   </body>
