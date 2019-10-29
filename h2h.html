@@ -44,7 +44,14 @@ body {margin: 0;padding: 0;}
   letter-spacing: 1px;
   font-family: "Lobster",Sans-serif;
   padding: 10px;
+  padding-right: 20px;
   display: inline-block;
+  border-right: 2px solid black;
+}
+.dropdown:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
 }
 
 .dropdown-content {
@@ -208,11 +215,11 @@ span.psw {
   width: 130%;
 }
 .side-bar {
+  position: absolute; 
   margin: 0;
   padding: 0;
   width: 250px;
   background-color: #DCDCDC;
-  position: fixed;
   height: 100%;
   overflow: auto;
 }
@@ -254,6 +261,24 @@ span.psw {
 }
 .placeholder-text::placeholder {
   color: black;
+}
+.books-section{
+  padding: 20px;
+  margin-left: 270px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+.inner-books{
+  text-align: center;
+  height: 80px;
+  width: 80px; 
+  display: inline-block;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+  border-image-slice: 1;
+  padding: 30px;
+  margin-right: 2rem;
 }
 </style>
 <body>
@@ -312,8 +337,22 @@ span.psw {
     <a href="#CIVIL">Civil Engineering</a>
     <a href="#MECH">Mechanical Engineering</a>
   </div>
-  <div class="left-navi">
-    
+  <div class="books-section">
+    <div class="inner-books">
+      <h1>AM-1</h1>
+    </div>
+    <div class="inner-books">
+      <h1>AM-2</h1>
+    </div>
+    <div class="inner-books">
+      <h1>AM-3</h1>
+    </div>
+    <div class="inner-books">
+      <h1>AM-4</h1>
+    </div>
+    <div class="inner-books">
+      <h1>BCE</h1>
+    </div>
   </div>
     <script>
 // Get the modal
