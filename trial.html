@@ -15,19 +15,26 @@
   display: inline-block;
   padding: 3px;
 }
-body {margin: 0;padding: 0;}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #DCDCDC;
+}
 
 .down {
   transform: rotate(45deg);
 }
 .heading{
+    background-color: white;
     text-align: center;
     height: 180px;
-    border-bottom: 1px solid black;
+    box-shadow: 0 8px 6px -6px grey;
+    border-bottom: 1px solid grey;
 }
 .heading header{
   font-family:"Lobster", Sans-serif;
   font-size: 60px;
+  color:  #FF4500;
   letter-spacing: 3px;
   float: left;
   margin-left: 10px;
@@ -41,11 +48,13 @@ body {margin: 0;padding: 0;}
   margin-top: 110px;
   margin-left: 70px; 
   font-size: 25px;
+  color:  #FF7F50;
 }
 .dropdown
 {
   margin-top: 60px;
   font-size: 25px;
+  color: grey;
   letter-spacing: 1px;
   font-family: "Lobster",Sans-serif;
   padding: 10px;
@@ -66,7 +75,7 @@ body {margin: 0;padding: 0;}
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .dropdown-content a {
-  color: black;
+  color: grey;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -78,6 +87,7 @@ body {margin: 0;padding: 0;}
 
 .dropdown:hover .dropdown-content {
   display: block;
+  z-index: 1;
 }
 .dropdown:hover .dropbtn {
   background-color: white;
@@ -90,12 +100,13 @@ body {margin: 0;padding: 0;}
   border: 1px solid #ccc;
   box-sizing: border-box;
   font-family: "Lobster",Sans-serif;
+  color: grey;
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: #FFF5EE;
-  color: black;
+  background-color: #a36262 ;
+  color: grey;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -111,8 +122,8 @@ button:hover {
 
 /* Extra styles for the cancel button */
 .cancelbtn {
+  margin-left: 10px;
   width: auto;
-  padding: 10px 18px;
   background-color: #f44336;
 }
 
@@ -124,6 +135,7 @@ button:hover {
 }
 
 img.avatar {
+  padding-top: 10px;
   width: 10%;
   border-radius: 50%;
 }
@@ -140,6 +152,7 @@ span.psw {
   font-size: 25px;
   letter-spacing: 1px;
   font-family: "Lobster",Sans-serif;
+  color: grey;
   padding: 10px;
   padding-left: 20px;
   cursor: pointer;
@@ -155,18 +168,19 @@ span.psw {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  /*overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
+  margin: 0 auto;
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -214,29 +228,101 @@ span.psw {
   padding: 16px;
   margin-left: 15px;
   font-size: 20px;
-  color: white;
+  color: grey;
   font-family: "Lobster",Sans-serif;
   box-sizing: border-box;
   width: 130%;
 }
-
-
+.side-bar{
+  display:none;
+  z-index:5;
+}
+.side-bar a{
+  display: block;
+}
 .placeholder-text::placeholder {
+  color: grey;
+}
+.flip-card {
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  box-shadow: 2px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  padding: 65px 20px 20px;  
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
   color: black;
 }
-.books-section{
+.flip-card-front h1{
+  text-align: center;
+  font-family: "Lobster",Sans-serif;
+}
+.flip-card-back {
+  background-color: #FBD783;
+  color: white;
+  padding-top: 90px;
+  transform: rotateY(180deg);
+}
+.flip-card-back a{
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  background-color: tomato;
+  border:1px solid black;
+  border-radius: 20px;
+}
+.side-bar-section{
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+
+}
+.bottom1{
+  background-color: #696969;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
   padding: 10px;
   text-align: center;
-  position: relative;
 }
-.inner-books{
+.bottom1 p{
+  float: left;
+  padding-right: 40px;
+  font-size: 30px;
+  color: white;
+  font-family: verdana;
+}
+.bottom-nav{
+  font-family: verdana;
+  font-size: 20px;
   display: inline-block;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
-  border-image-slice: 1;
-  padding: 30px;
-  margin-left: 30px;
+  color: white;
 }
 </style>
 <body>
@@ -287,39 +373,48 @@ span.psw {
       </form>
     </div>
   </div>
-  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5;" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-    <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="#" class="w3-bar-item w3-button">Computer Engineering</a>
-    <a href="#" class="w3-bar-item w3-button">IT Engineering</a>
-    <a href="#" class="w3-bar-item w3-button">Electronics & Telecomunication Engineering</a>
-    <a href="#" class="w3-bar-item w3-button">Mechanical Engineering</a>
-  </div>
-
-<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-<div>
-  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-</div>
      
-  <div class="books-section">
-    <div class="inner-books">
-      <h1>AM-1</h1>
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <h1>AM-1</h1>
     </div>
-    <div class="inner-books">
-      <h1>AM-2</h1>
-    </div>
-    <div class="inner-books">
-      <h1>AM-3</h1>
-    </div>
-    <div class="inner-books">
-      <h1>AM-4</h1>
-    </div>
-    <div class="inner-books">
-      <h1>BCE</h1>
+    <div class="flip-card-back">
+      <a href="#">View Details</a> 
     </div>
   </div>
-    <script>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <h1>AM-2</h1>
+    </div>
+    <div class="flip-card-back">
+      <a href="#">View Details</a> 
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <h1>AM-3</h1>
+    </div>
+    <div class="flip-card-back">
+      <a href="#">View Details</a> 
+    </div>
+  </div>
+</div>
+<div class="bottom1">
+  <p>Creator:</p>
+  <div class="bottom-nav">
+    <div class="naming">
+      <img src="">
+      <p>Sarvesh Khandelwal</p>
+    </div>
+  </div>
+</div>
+</body>
+  <script>
 // Get the modal
     var modal = document.getElementById('id01');
 
@@ -329,15 +424,6 @@ span.psw {
           modal.style.display = "none";
         } 
     }
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-}
-
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
     </script>
   </body>
 </html>
